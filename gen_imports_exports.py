@@ -31,34 +31,27 @@ class IEViewer(object):
             self._imports.append([ord, ea, tmp[0], tmp[1]])
         return True
 
-    def get_imports(self):
+    def get_imports(self, only_name=False):
         if self._imports:
-            return self._imports
+            return [item[2:] for item in self._imports] if only_name else self._imports
 
         nimps = idaapi.get_import_module_qty()
         for i in range(nimps):
             idaapi.enum_import_names(i, self.imports_names_cb)
         self._imports.sort(key=lambda x: x[2])
-        return self._imports
+        return [item[2:] for item in self._imports] if only_name else self._imports
 
-    def get_exports(self):
+    def get_exports(self, only_name=False):
         if self._exports:
-            return self._exports
+            return [item[3] for item in self._exports] if only_name else self._exports
         self._exports = list(idautils.Entries())
-        return self._exports
+        return [item[3] for item in self._exports] if only_name else self._exports
 
     def save(self, save_path='imports_exports.json', only_name=False):
-        if only_name:
-            save_data = {
-                'imports': [item[2:] for item in self.get_imports()],
-                'exports': [item[3] for item in self.get_exports()],
-            }
-        else:
-            save_data = {
-                'imports': self.get_imports(),
-                'exports': self.get_exports(),
-            }
-
+        save_data = {
+            'imports': self.get_imports(only_name),
+            'exports': self.get_exports(only_name),
+        }
         write_json(save_data, save_path)
 
 
