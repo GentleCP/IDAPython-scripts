@@ -14,12 +14,7 @@ import idautils
 import idc
 from pathlib import Path
 import json
-
-
-def write_json(content, fname):
-    fname = Path(fname)
-    with fname.open('wt') as handle:
-        json.dump(content, handle, indent=4, sort_keys=False)
+from utils import write_json, get_param
 
 
 class FuncnameViewer(object):
@@ -113,18 +108,6 @@ class StringViewer(object):
 
         write_json(save_data, save_path)
 
-
-def get_param(index, default):
-    """
-    从命令行终端获取参数
-    :param index:
-    :param default:
-    :return:
-    """
-    try:
-        return idc.ARGV[index]
-    except IndexError:
-        return default
 
 
 if __name__ == '__main__':
