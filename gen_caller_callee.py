@@ -26,9 +26,9 @@ class CallViewer(object):
     def __init__(self):
         self._func2calls = defaultdict(dict)  # {'f1': {'caller': list, 'callee': list}}
 
-    def get_calls(self):
+    def get_calls(self, only_funcs=None):
         if self._func2calls:
-            return self._func2calls
+            return {k: v for k, v in self._func2calls.items() if k in only_funcs} if only_funcs else self._func2calls
 
         bar = tqdm(list(idautils.Functions()))
         for function_ea in bar:
@@ -42,7 +42,7 @@ class CallViewer(object):
                 # update callee by reverse call, f_name -> func_name
                 if f_name:
                     self._func2calls[f_name].setdefault('callee', []).append(func_name)
-        return self._func2calls
+        return {k: v for k, v in self._func2calls.items() if k in only_funcs} if only_funcs else self._func2calls
 
     def save(self, save_path='caller_callee.json', only_funcs=None):
         """
@@ -51,10 +51,7 @@ class CallViewer(object):
         :param only_funcs: 只保存选定的函数calls
         :return:
         """
-        if only_funcs:
-            save_data = {k: v for k, v in self.get_calls().items() if k in only_funcs}
-        else:
-            save_data = self.get_calls()
+        save_data = self.get_calls(only_funcs)
         write_json(save_data, save_path)
 
 

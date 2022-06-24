@@ -9,8 +9,10 @@ Email: me@gentlecp.com
 Create Date: 2022/6/21
 -----------------End-----------------------------
 """
-import idautils
 import idc
+import idaapi
+import idautils
+from tqdm import tqdm
 from utils import write_json, get_param
 
 
@@ -25,8 +27,11 @@ class FuncnameViewer(object):
     def get_func_names(self, only_name=False):
         if self._func_names:
             return [item[-1] for item in self._func_names] if only_name else self._func_names
-        for ea in idautils.Functions():
-            self._func_names.append((ea, idc.get_func_name(ea)))
+        bar = tqdm(list(idautils.Functions()))
+        for ea in bar:
+            f_name = idaapi.get_func_name(ea)
+            bar.set_description(f'generate {ea}, {f_name}')
+            self._func_names.append((ea, f_name))
         return [item[-1] for item in self._func_names] if only_name else self._func_names
 
     def save(self, save_path='func_names.json', only_name=False):
@@ -47,7 +52,9 @@ class StringViewer(object):
         if self._strings:
             res = self._strings_in_rodata if rodata else self._strings
         else:
-            for s in idautils.Strings():
+            bar = tqdm(list(idautils.Strings()))
+            for s in bar:
+                bar.set_description(f'generate {s}')
                 seg = idc.get_segm_name(s.ea)
                 self._strings.append((s.ea, seg, s.length, s.strtype, str(s)))
                 if seg == '.rodata':
