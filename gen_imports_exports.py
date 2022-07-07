@@ -11,7 +11,7 @@ Create Date: 6/15/22
 """
 import idaapi
 import idautils
-from utils import write_json
+from utils import write_json, waiting_analysis
 
 
 class IEViewer(object):
@@ -56,5 +56,6 @@ class IEViewer(object):
 
 
 if __name__ == '__main__':
+    waiting_analysis()
     viewer = IEViewer()
     viewer.save(only_name=True)

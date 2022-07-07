@@ -15,7 +15,7 @@ import idautils
 import idc
 from collections import defaultdict
 from tqdm import tqdm
-from utils import write_json, get_param
+from utils import write_json, get_param, waiting_analysis
 
 
 class CallViewer(object):
@@ -56,4 +56,5 @@ class CallViewer(object):
 
 
 if __name__ == '__main__':
+    waiting_analysis()
     CallViewer().save(save_path=get_param(1, 'caller_callee.json'))
