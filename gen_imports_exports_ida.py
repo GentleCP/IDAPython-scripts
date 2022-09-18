@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 -----------------File Info-----------------------
-Name: gen_imports_exports.py
+Name: gen_imports_exports_ida.py
 Description:
 Author: GentleCP
 Email: me@gentlecp.com

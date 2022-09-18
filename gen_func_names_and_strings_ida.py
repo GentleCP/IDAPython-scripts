@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 -----------------File Info-----------------------
-Name: gen_func_names_and_strings.py
+Name: gen_func_names_and_strings_ida.py
 Description: 提取二进制中的有效字符串和函数名
 Author: GentleCP
 Email: me@gentlecp.com

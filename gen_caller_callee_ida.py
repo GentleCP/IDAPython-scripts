@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 -----------------File Info-----------------------
-Name: gen_caller_callee.py
+Name: gen_caller_callee_ida.py
 Description: 生成每个函数的caller和callee调用关系
 Author: GentleCP
 Email: me@gentlecp.com
