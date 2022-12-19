@@ -12,10 +12,10 @@ Create Date: 6/24/22
 
 import idaapi
 import idautils
-import idc
+from cptools import write_json
 from collections import defaultdict
 from tqdm import tqdm
-from utils import write_json, get_param, waiting_analysis
+from utils.tool_function import get_param, waiting_analysis, quit_ida
 
 
 class CallViewer(object):
@@ -58,3 +58,4 @@ class CallViewer(object):
 if __name__ == '__main__':
     waiting_analysis()
     CallViewer().save(save_path=get_param(1, 'caller_callee.json'))
+    quit_ida(0)

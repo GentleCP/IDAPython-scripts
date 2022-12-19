@@ -3,7 +3,7 @@
 """
 -----------------File Info-----------------------
 Name: gen_imports_exports_ida.py
-Description:
+Description: 提取binary的导入导出表
 Author: GentleCP
 Email: me@gentlecp.com
 Create Date: 6/15/22
@@ -11,7 +11,9 @@ Create Date: 6/15/22
 """
 import idaapi
 import idautils
-from utils import write_json, waiting_analysis
+import idc
+from cptools import write_json
+from utils.tool_function import waiting_analysis, get_param, quit_ida
 
 
 class IEViewer(object):
@@ -47,7 +49,7 @@ class IEViewer(object):
         self._exports = list(idautils.Entries())
         return [item[3] for item in self._exports] if only_name else self._exports
 
-    def save(self, save_path='imports_exports.json', only_name=False):
+    def save(self, save_path='imports_exports.json', only_name=True):
         save_data = {
             'imports': self.get_imports(only_name),
             'exports': self.get_exports(only_name),
@@ -58,4 +60,5 @@ class IEViewer(object):
 if __name__ == '__main__':
     waiting_analysis()
     viewer = IEViewer()
-    viewer.save(only_name=True)
+    viewer.save(save_path=get_param(1, 'func_names.json'), only_name=True)
+    quit_ida(0)

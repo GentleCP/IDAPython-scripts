@@ -1,0 +1,601 @@
+{
+    ".__errno_location": {
+        "callee": [
+            "__errno_location"
+        ],
+        "caller": [
+            "main",
+            "main",
+            "main",
+            "main",
+            "main",
+            "main",
+            "main",
+            "set_acl",
+            "set_acl",
+            "set_acl",
+            "set_acl"
+        ]
+    },
+    ".__uClibc_main": {
+        "callee": [
+            "__uClibc_main"
+        ],
+        "caller": [
+            "_start"
+        ]
+    },
+    ".__xpg_basename": {
+        "callee": [
+            "__xpg_basename"
+        ],
+        "caller": [
+            "main"
+        ]
+    },
+    ".acl_check": {
+        "callee": [
+            "acl_check"
+        ],
+        "caller": [
+            "main",
+            "main"
+        ]
+    },
+    ".acl_delete_def_file": {
+        "callee": [
+            "acl_delete_def_file"
+        ],
+        "caller": [
+            "main"
+        ]
+    },
+    ".acl_delete_entry": {
+        "callee": [
+            "acl_delete_entry"
+        ],
+        "caller": [
+            "main"
+        ]
+    },
+    ".acl_entries": {
+        "callee": [
+            "acl_entries"
+        ],
+        "caller": [
+            "main"
+        ]
+    },
+    ".acl_error": {
+        "callee": [
+            "acl_error"
+        ],
+        "caller": [
+            "main"
+        ]
+    },
+    ".acl_free": {
+        "callee": [
+            "acl_free"
+        ],
+        "caller": [
+            "main",
+            "main",
+            "main",
+            "main",
+            "main",
+            "main"
+        ]
+    },
+    ".acl_from_text": {
+        "callee": [
+            "acl_from_text"
+        ],
+        "caller": [
+            "main",
+            "main"
+        ]
+    },
+    ".acl_get_entry": {
+        "callee": [
+            "acl_get_entry"
+        ],
+        "caller": [
+            "main"
+        ]
+    },
+    ".acl_get_file": {
+        "callee": [
+            "acl_get_file"
+        ],
+        "caller": [
+            "main",
+            "main",
+            "main"
+        ]
+    },
+    ".acl_get_tag_type": {
+        "callee": [
+            "acl_get_tag_type"
+        ],
+        "caller": [
+            "main"
+        ]
+    },
+    ".acl_set_file": {
+        "callee": [
+            "acl_set_file"
+        ],
+        "caller": [
+            "main",
+            "set_acl",
+            "set_acl"
+        ]
+    },
+    ".acl_to_any_text": {
+        "callee": [
+            "acl_to_any_text"
+        ],
+        "caller": [
+            "main",
+            "main"
+        ]
+    },
+    ".closedir": {
+        "callee": [
+            "closedir"
+        ],
+        "caller": [
+            "set_acl"
+        ]
+    },
+    ".exit": {
+        "callee": [
+            "exit"
+        ],
+        "caller": [
+            "usage",
+            "set_acl"
+        ]
+    },
+    ".fprintf": {
+        "callee": [
+            "fprintf"
+        ],
+        "caller": [
+            "main",
+            "main",
+            "main",
+            "main",
+            "main",
+            "main",
+            "main",
+            "main",
+            "usage",
+            "usage",
+            "usage",
+            "usage",
+            "usage",
+            "usage",
+            "usage",
+            "usage",
+            "set_acl",
+            "set_acl",
+            "set_acl",
+            "set_acl"
+        ]
+    },
+    ".free": {
+        "callee": [
+            "free"
+        ],
+        "caller": [
+            "set_acl"
+        ]
+    },
+    ".fwrite": {
+        "callee": [
+            "fwrite"
+        ],
+        "caller": [
+            "usage"
+        ]
+    },
+    ".getopt": {
+        "callee": [
+            "getopt"
+        ],
+        "caller": [
+            "main",
+            "main"
+        ]
+    },
+    ".init_proc": {
+        "callee": [
+            "__get_pc_thunk_bx",
+            "frame_dummy",
+            "__do_global_ctors_aux"
+        ]
+    },
+    ".malloc": {
+        "callee": [
+            "malloc"
+        ],
+        "caller": [
+            "set_acl"
+        ]
+    },
+    ".opendir": {
+        "callee": [
+            "opendir"
+        ],
+        "caller": [
+            "set_acl"
+        ]
+    },
+    ".printf": {
+        "callee": [
+            "printf"
+        ],
+        "caller": [
+            "main",
+            "main"
+        ]
+    },
+    ".readdir64": {
+        "callee": [
+            "readdir64"
+        ],
+        "caller": [
+            "set_acl",
+            "set_acl"
+        ]
+    },
+    ".setlocale": {
+        "callee": [
+            "setlocale"
+        ],
+        "caller": [
+            "main",
+            "main"
+        ]
+    },
+    ".sprintf": {
+        "callee": [
+            "sprintf"
+        ],
+        "caller": [
+            "set_acl"
+        ]
+    },
+    ".strerror": {
+        "callee": [
+            "strerror"
+        ],
+        "caller": [
+            "main",
+            "main",
+            "main",
+            "main",
+            "main",
+            "main",
+            "main",
+            "set_acl",
+            "set_acl",
+            "set_acl",
+            "set_acl"
+        ]
+    },
+    ".strlen": {
+        "callee": [
+            "strlen"
+        ],
+        "caller": [
+            "set_acl",
+            "set_acl"
+        ]
+    },
+    ".term_proc": {
+        "callee": [
+            "__get_pc_thunk_bx",
+            "__do_global_dtors_aux"
+        ]
+    },
+    "__do_global_ctors_aux": {
+        "caller": [
+            ".init_proc"
+        ]
+    },
+    "__do_global_dtors_aux": {
+        "callee": [
+            "deregister_tm_clones"
+        ],
+        "caller": [
+            ".term_proc"
+        ]
+    },
+    "__errno_location": {
+        "caller": [
+            ".__errno_location"
+        ]
+    },
+    "__get_pc_thunk_bx": {
+        "caller": [
+            ".init_proc",
+            ".term_proc"
+        ]
+    },
+    "__uClibc_main": {
+        "caller": [
+            ".__uClibc_main"
+        ]
+    },
+    "__xpg_basename": {
+        "caller": [
+            ".__xpg_basename"
+        ]
+    },
+    "_start": {
+        "callee": [
+            ".__uClibc_main"
+        ]
+    },
+    "acl_check": {
+        "caller": [
+            ".acl_check"
+        ]
+    },
+    "acl_delete_def_file": {
+        "caller": [
+            ".acl_delete_def_file"
+        ]
+    },
+    "acl_delete_entry": {
+        "caller": [
+            ".acl_delete_entry"
+        ]
+    },
+    "acl_entries": {
+        "caller": [
+            ".acl_entries"
+        ]
+    },
+    "acl_error": {
+        "caller": [
+            ".acl_error"
+        ]
+    },
+    "acl_free": {
+        "caller": [
+            ".acl_free"
+        ]
+    },
+    "acl_from_text": {
+        "caller": [
+            ".acl_from_text"
+        ]
+    },
+    "acl_get_entry": {
+        "caller": [
+            ".acl_get_entry"
+        ]
+    },
+    "acl_get_file": {
+        "caller": [
+            ".acl_get_file"
+        ]
+    },
+    "acl_get_tag_type": {
+        "caller": [
+            ".acl_get_tag_type"
+        ]
+    },
+    "acl_set_file": {
+        "caller": [
+            ".acl_set_file"
+        ]
+    },
+    "acl_to_any_text": {
+        "caller": [
+            ".acl_to_any_text"
+        ]
+    },
+    "closedir": {
+        "caller": [
+            ".closedir"
+        ]
+    },
+    "deregister_tm_clones": {
+        "caller": [
+            "__do_global_dtors_aux"
+        ]
+    },
+    "exit": {
+        "caller": [
+            ".exit"
+        ]
+    },
+    "fprintf": {
+        "caller": [
+            ".fprintf"
+        ]
+    },
+    "frame_dummy": {
+        "callee": [
+            "register_tm_clones",
+            "register_tm_clones"
+        ],
+        "caller": [
+            ".init_proc"
+        ]
+    },
+    "free": {
+        "caller": [
+            ".free"
+        ]
+    },
+    "fwrite": {
+        "caller": [
+            ".fwrite"
+        ]
+    },
+    "getopt": {
+        "caller": [
+            ".getopt"
+        ]
+    },
+    "main": {
+        "callee": [
+            ".printf",
+            ".printf",
+            ".acl_entries",
+            ".strerror",
+            ".strerror",
+            ".strerror",
+            ".strerror",
+            ".strerror",
+            ".strerror",
+            ".strerror",
+            ".__xpg_basename",
+            ".acl_to_any_text",
+            ".acl_to_any_text",
+            ".acl_error",
+            ".acl_get_tag_type",
+            ".acl_delete_entry",
+            ".acl_get_entry",
+            ".acl_free",
+            ".acl_free",
+            ".acl_free",
+            ".acl_free",
+            ".acl_free",
+            ".acl_free",
+            ".fprintf",
+            ".fprintf",
+            ".fprintf",
+            ".fprintf",
+            ".fprintf",
+            ".fprintf",
+            ".fprintf",
+            ".fprintf",
+            ".getopt",
+            ".getopt",
+            ".acl_check",
+            ".acl_check",
+            ".setlocale",
+            ".setlocale",
+            ".acl_set_file",
+            ".acl_from_text",
+            ".acl_from_text",
+            ".acl_get_file",
+            ".acl_get_file",
+            ".acl_get_file",
+            ".__errno_location",
+            ".__errno_location",
+            ".__errno_location",
+            ".__errno_location",
+            ".__errno_location",
+            ".__errno_location",
+            ".__errno_location",
+            ".acl_delete_def_file",
+            "usage",
+            "set_acl"
+        ]
+    },
+    "malloc": {
+        "caller": [
+            ".malloc"
+        ]
+    },
+    "opendir": {
+        "caller": [
+            ".opendir"
+        ]
+    },
+    "printf": {
+        "caller": [
+            ".printf"
+        ]
+    },
+    "readdir64": {
+        "caller": [
+            ".readdir64"
+        ]
+    },
+    "register_tm_clones": {
+        "caller": [
+            "frame_dummy",
+            "frame_dummy"
+        ]
+    },
+    "set_acl": {
+        "callee": [
+            ".strerror",
+            ".strerror",
+            ".strerror",
+            ".strerror",
+            ".malloc",
+            ".fprintf",
+            ".fprintf",
+            ".fprintf",
+            ".fprintf",
+            ".readdir64",
+            ".readdir64",
+            ".opendir",
+            ".sprintf",
+            ".acl_set_file",
+            ".acl_set_file",
+            ".__errno_location",
+            ".__errno_location",
+            ".__errno_location",
+            ".__errno_location",
+            ".exit",
+            ".strlen",
+            ".strlen",
+            ".closedir",
+            ".free",
+            "set_acl"
+        ],
+        "caller": [
+            "main",
+            "set_acl"
+        ]
+    },
+    "setlocale": {
+        "caller": [
+            ".setlocale"
+        ]
+    },
+    "sprintf": {
+        "caller": [
+            ".sprintf"
+        ]
+    },
+    "strerror": {
+        "caller": [
+            ".strerror"
+        ]
+    },
+    "strlen": {
+        "caller": [
+            ".strlen"
+        ]
+    },
+    "sub_80487B0": {},
+    "usage": {
+        "callee": [
+            ".fprintf",
+            ".fprintf",
+            ".fprintf",
+            ".fprintf",
+            ".fprintf",
+            ".fprintf",
+            ".fprintf",
+            ".fprintf",
+            ".fwrite",
+            ".exit"
+        ],
+        "caller": [
+            "main"
+        ]
+    }
+}

@@ -13,7 +13,8 @@ import idc
 import idaapi
 import idautils
 from tqdm import tqdm
-from utils import write_json, get_param, waiting_analysis
+from cptools import write_json
+from utils.tool_function import get_param, waiting_analysis, quit_ida
 
 
 class FuncnameViewer(object):
@@ -73,5 +74,6 @@ class StringViewer(object):
 
 if __name__ == '__main__':
     waiting_analysis()
-    FuncnameViewer().save(get_param(1, 'func_names.json'), only_name=get_param(3, True))
-    StringViewer().save(get_param(2, 'string.json'), only_name=get_param(3, True))
+    FuncnameViewer().save(get_param(1, 'func_names.json'), only_name=True)
+    StringViewer().save(get_param(2, 'string.json'), only_name=True)
+    quit_ida(0)
